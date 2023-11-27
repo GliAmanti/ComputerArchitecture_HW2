@@ -39,6 +39,8 @@ main_loop:
     bne s1, s0, main_loop
     
     addi sp, sp, 12
+
+    # Exit program
     li a7, 10
     ecall
 
@@ -74,7 +76,7 @@ cmp:
     mv a1, s5
     
 jmpClz:
-    jal ra clz
+    jal ra, clz
     li s3, 64           # s3: 64
     sub s3, s3, a0      # s3: 64 - max_digit (return value saved in a0)
     addi s2, x0, 1      # s2: 1
