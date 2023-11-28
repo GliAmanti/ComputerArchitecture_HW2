@@ -58,7 +58,7 @@ main_loop:
     sw a1, 8(sp)
     sw a2, 12(sp)
     # addi a0, x0, 33
-    addi a1, x0, 4
+    addi a1, x0, 4      # default: result is 4 digits number
     jal ra, print_ascii
     lw ra, 0(sp)
     lw a0, 4(sp)
